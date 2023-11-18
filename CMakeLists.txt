@@ -4,7 +4,13 @@ project(CandyCommon)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 find_package(spdlog CONFIG REQUIRED)
-add_subdirectory(lib/rapidyaml)
+find_package(ryml CONFIG REQUIRED)
+
+
+
+
+# Now we can include the directories resulting from the script via add_subdirectory
+
 add_subdirectory(lib/nativefiledialog)
 
 set(CANDY_BASE_HEADERS include/candy/base/Assert.hpp
@@ -145,6 +151,6 @@ endif()
 
 target_include_directories(CandyCommon PUBLIC include)
 target_include_directories(CandyCommon PRIVATE lib/nativefiledialog/src/include)
-target_link_libraries(CandyCommon PRIVATE ryml::ryml nfd)
-target_link_libraries(CandyCommon PUBLIC spdlog::spdlog)
+target_link_libraries(CandyCommon PRIVATE nfd)
+target_link_libraries(CandyCommon PUBLIC spdlog::spdlog ryml::ryml)
 

@@ -1,6 +1,6 @@
 #include <candy/base/Version.hpp>
-#include <ryml_std.hpp>
-#include <ryml.hpp>
+#include <ryml/ryml_std.hpp>
+#include <ryml/ryml.hpp>
 #include <c4/format.hpp>
 namespace Candy
 {
