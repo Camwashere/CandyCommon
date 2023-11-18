@@ -1,0 +1,9 @@
+{
+  "name" : "candycommon",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "8413fd7fc2a361489b160f91a5ec1c01dcee3ecf",
+  "dependencies" : [ {
+    "name" : "spdlog",
+    "version>=" : "1.12.0"
+  } ]
+}

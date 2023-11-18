@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSharedSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" GENERATION_DIR="build/debug" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=C:\Users\perso\.vcpkg-clion\vcpkgFont\scripts\buildsystems\vcpkg.cmake -DVCPKG_MANIFEST_MODE:BOOL=ON -DVCPKG_TARGET_TRIPLET:STRING=x64-mingw-dynamic -DC4_DBG_ENABLED:BOOL=ON -DCANDY_ENABLE_LOGGING:BOOL=ON" BUILD_OPTIONS="-- -j 24" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" GENERATION_DIR="build/release" CONFIG_NAME="Release" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=C:\Users\perso\.vcpkg-clion\vcpkgFont\scripts\buildsystems\vcpkg.cmake -DVCPKG_TARGET_TRIPLET:STRING=x64-mingw-dynamic" BUILD_OPTIONS="-- -j 24" />
+      <configuration PROFILE_NAME="ProfileDebug" ENABLED="true" GENERATION_DIR="build/profileDebug" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=C:\Users\perso\.vcpkg-clion\vcpkgFont\scripts\buildsystems\vcpkg.cmake -DVCPKG_TARGET_TRIPLET:STRING=x64-mingw-dynamic" BUILD_OPTIONS="-- -j 24" />
+    </configurations>
+  </component>
+</project>
