@@ -147,5 +147,4 @@ target_include_directories(CandyCommon PUBLIC include)
 target_include_directories(CandyCommon PRIVATE lib/nativefiledialog/src/include)
 target_link_libraries(CandyCommon PRIVATE ryml::ryml nfd)
 target_link_libraries(CandyCommon PUBLIC spdlog::spdlog)
-add_executable(CandyCommonExec main.cpp)
-target_link_libraries(CandyCommonExec PUBLIC CandyCommon)
+
