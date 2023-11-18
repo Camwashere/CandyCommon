@@ -14,6 +14,12 @@ namespace c4
 namespace Candy
 {
   
+  /**
+   * @brief Version identifier. Formatted as (major.minor.patch).
+   * @details Incrementing the major version number indicates a breaking change or major update.
+   * Incrementing the minor version number indicates a new feature.
+   * Incrementing the patch version number indicates a bug fix or patch.
+   */
   class Version
   {
   private:

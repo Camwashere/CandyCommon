@@ -1,7 +1,12 @@
 #pragma once
 #include <vector>
+#include <candy/base/Assert.hpp>
 namespace Candy::Collections
 {
+  /**
+   * @brief A generic buffer that can be used to store data of any type.
+   * @details Internally, data is stored as a vector of chars. The buffer does not track the sizes/locations of unique data stored inside it. If tracking of the data is needed, that must be implemented externally
+   */
   class GenericBuffer
   {
   private:

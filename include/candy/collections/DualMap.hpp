@@ -3,6 +3,17 @@
 #include <cstdint>
 namespace Candy::Collections
 {
+  /**
+   * @brief A map that can be accessed by key or value.
+   * @note BOTH the key and value MUST be valid keys for std::unordered_map IE hashable. This means that the key and value must be of a type that has a std::hash specialization.
+   * You WILL get a compiler error if you try to use a type that does not have a std::hash specialization for either key or value.
+   * @details This is useful for when you need to access a value by key, but also need to access the key by value.
+   * Internally this is implemented as two std::unordered_map's, one for key -> value and one for value -> key.
+   * Both maps are kept in sync with each other at all times for every operation.
+   *
+   * @tparam KEY
+   * @tparam VALUE
+   */
   template<typename KEY, typename VALUE>
   class DualMap
   {
