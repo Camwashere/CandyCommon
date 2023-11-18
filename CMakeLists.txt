@@ -67,6 +67,11 @@ set(CANDY_MATH_HEADERS include/candy/math/Vector.hpp
         include/candy/math/curve/BezierCurveFixed.hpp
         include/candy/math/geometry/Contour.hpp
         include/candy/math/geometry/Line.hpp
+        include/candy/math/Color.hpp
+        include/candy/math/color/ColorRGBA.inl
+        include/candy/math/color/ColorRGBA.hpp
+        include/candy/math/color/ColorBaseStaticData.hpp
+        include/candy/math/color/ColorBase.hpp
 )
 
 set(CANDY_MATH_SOURCES

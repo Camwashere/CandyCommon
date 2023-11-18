@@ -97,6 +97,11 @@ namespace Candy::Noise
             perm[period+i] = perm[i];
         }
     }
+  
+  int PerlinNoise::GetPeriod()const{return period;}
+  void PerlinNoise::Set(long seed, int periodValue){period=periodValue;period2=period*2;periodMinusOne=period-1; random.SetSeed(seed); BuildPermutations();}
+  void PerlinNoise::SetPeriod(int periodValue){period=periodValue;period2=period*2;periodMinusOne=period-1; BuildPermutations();}
+  void PerlinNoise::SetSeed(long seed){random.SetSeed(seed); BuildPermutations();}
     
     
 }

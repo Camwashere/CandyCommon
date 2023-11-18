@@ -14,17 +14,17 @@ namespace Candy::Noise
     
     private:
         void BuildPermutations();
-        static constexpr float Grad(int hash, float x)
+        static inline constexpr float Grad(int hash, float x)
         {
             return (hash & 1) == 0 ? x : -x;
         }
         
-        static constexpr float Grad(int hash, float x, float y)
+        static inline constexpr float Grad(int hash, float x, float y)
         {
             return ((hash & 1) == 0 ? x : -x) + ((hash & 2) == 0 ? y : -y);
         }
         
-        static constexpr float Grad(int hash, float x, float y, float z)
+        static inline constexpr float Grad(int hash, float x, float y, float z)
         {
             int h = hash & 15;                      // CONVERT LO 4 BITS OF HASH CODE
             float u = h<8 ? x : y,                 // INTO 12 GRADIENT DIRECTIONS.
@@ -38,10 +38,10 @@ namespace Candy::Noise
     
     
     public:
-        [[nodiscard]] int GetPeriod()const{return period;}
-        void Set(long seed, int periodValue){period=periodValue;period2=period*2;periodMinusOne=period-1; random.SetSeed(seed); BuildPermutations();}
-        void SetPeriod(int periodValue){period=periodValue;period2=period*2;periodMinusOne=period-1; BuildPermutations();}
-        void SetSeed(long seed){random.SetSeed(seed); BuildPermutations();}
+        [[nodiscard]] int GetPeriod()const;
+        void Set(long seed, int periodValue);
+        void SetPeriod(int periodValue);
+        void SetSeed(long seed);
     
     
     public:
